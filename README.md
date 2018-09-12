@@ -3,8 +3,8 @@
 # Cardinal Hire QA Automation Repository
 
 ## Python Setup
-1. Install python 3.7.0 version
-2. pip3.7 install --user pipenv
+1. Install python 3.7.0 version from https://www.python.org/downloads/release/python-370/
+2. `pip3.7 install --user pipenv`
 installs pip and virtualenv under $HOME/Library/Python/3.7/bin
 3. create python virtual env: virtualenv venv
 4. source venv/bin/activate
