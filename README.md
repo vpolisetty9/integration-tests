@@ -18,11 +18,15 @@ pip install Appium-Python-Client
 pip install pytest
 ```
 ## Chromedriver setup
-1. Download
+1. Download chromedriver compatible version equivalent with selenium driver.
+https://chromedriver.storage.googleapis.com/index.html
 
 ## IDE Setup
 1. Install Pycharm (http://www.jetbrains.com/pycharm/) or intellj IDE (need to install Python plugin from marketplace)
 2. Select the python from your venv as your python interpreter
+
+## How to run tests
+In progress
 
 ## Automation Framework
 1. Framework Directory Structure:
