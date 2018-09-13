@@ -11,7 +11,8 @@ installs pip and virtualenv under $HOME/Library/Python/3.7/bin
 3. create python virtual env: `python3 -m virtualenv venv`
 4. Activate the virtual env: `source venv/bin/activate`
 5. Install the following python modules in the virtual env:
-```pip install requests
+```
+pip install requests
 pip install selenium
 pip install sauceclient
 pip install Appium-Python-Client
@@ -20,6 +21,9 @@ pip install pytest
 ## Chromedriver setup
 1. Download chromedriver compatible version equivalent with selenium driver.
 https://chromedriver.storage.googleapis.com/index.html
+2. Set the chromedriver in system path -- In progress
+
+Note: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 ## IDE Setup
 1. Install Pycharm (http://www.jetbrains.com/pycharm/) or intellj IDE (need to install Python plugin from marketplace)
