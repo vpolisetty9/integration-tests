@@ -7,10 +7,10 @@
 https://www.python.org/downloads/release/python-370/
 https://www.python.org/downloads/windows/
 2. `pip3.7 install --user pipenv`
-installs pip and virtualenv under $HOME/Library/Python/3.7/bin
-3. create python virtual env: `python3 -m virtualenv venv`
+Installs pip and virtualenv under $HOME/Library/Python/3.7/bin
+3. Create python virtual env: `python3 -m virtualenv venv`
 4. Activate the virtual env: `source venv/bin/activate`
-5. Install the following python modules in the virtual env:
+5. Install the following python modules in the virtual env `venv`:
 ```
 pip install requests
 pip install selenium
@@ -19,6 +19,8 @@ pip install Appium-Python-Client
 pip install pytest
 pip install allure-pytest
 ```
+Note:`pip list` will give the list of installed modules 
+
 ## Chromedriver setup
 1. Download chromedriver compatible version equivalent with selenium driver.
 https://chromedriver.storage.googleapis.com/index.html
