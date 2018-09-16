@@ -3,17 +3,24 @@ from selenium.webdriver.common.by import By
 
 class SearchPage(BasePage):
 
-    search_button = (By.CSS_SELECTOR, '#new_search input[type="submit"]')
+    search_button = (By.CSS_SELECTOR, 'input[type="submit"][value="Find Candidate"]')
     cancel_button = (By.CSS_SELECTOR, '#new_search input[type="cancel"]')
-    keyword_input = (By.CSS_SELECTOR, '#new_search #search_keyword')
-    skills_input = (By.CSS_SELECTOR, '#new_search #search_skills')
-    locations_input = (By.CSS_SELECTOR, '#new_search #search_locations')
-    school_input = (By.CSS_SELECTOR, '#new_search #search_schools')
-    disciplines_input = (By.CSS_SELECTOR, '#new_search #search_disciplines')
-    degrees_input = (By.CSS_SELECTOR, '#new_search #search_degrees')
-    employers_input =(By.CSS_SELECTOR,  '#new_search #search_employers')
-    names_input = (By.CSS_SELECTOR, '#new_search #search_names')
     titles_input = (By.CSS_SELECTOR, '#new_search #search_titles')
+    locations_input = (By.CSS_SELECTOR, '#new_search #search_locations')
+    skills_input = (By.CSS_SELECTOR, '#new_search #search_skills')
+    employers_input =(By.CSS_SELECTOR,  '#new_search #search_employers')
+    disciplines_input = (By.CSS_SELECTOR, '#new_search #search_disciplines')
+    school_input = (By.CSS_SELECTOR, '#new_search #search_schools')
+    min_education_level = (By.CSS_SELECTOR, '#search_min_education_level')
+    top_school_checkbox = (By.CSS_SELECTOR, '#search_top_school')
+    top_school_tooltip = (By.CSS_SELECTOR, '.search_top_school .tooltip-search div')
+    top_company_checkbox = (By.CSS_SELECTOR, '#search_top_company')
+    top_company_tooltip = (By.CSS_SELECTOR, '.search_top_company .tooltip-search div')
+    keyword_input = (By.CSS_SELECTOR, '#new_search #search_keyword')
+
+    # Old UI elements
+    degrees_input = (By.CSS_SELECTOR, '#new_search #search_degrees')
+    names_input = (By.CSS_SELECTOR, '#new_search #search_names')
     experiences_input = (By.CSS_SELECTOR, '#new_search #search_experience_years')
     fulltime_checkbox = (By.CSS_SELECTOR, '#new_search #search_job_type_full_time')
     contract_checkbox = (By.CSS_SELECTOR, '#new_search #search_job_type_contract')
@@ -23,4 +30,7 @@ class SearchPage(BasePage):
 
     # search results elements
     total_candidates_text = (By.CSS_SELECTOR, '.total-candidates')
+    candidate_grid = (By.CSS_SELECTOR, '.grid-candidate')
     candidate_title = (By.CSS_SELECTOR, '.grid-candidate .employer_candidate_title > a')
+    candidate_job_title = (By.CSS_SELECTOR, '.grid-candidate .grid-name-intro p')
+    candidate_skills = (By.CSS_SELECTOR, '.grid-skillz-text')

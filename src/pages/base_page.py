@@ -107,7 +107,7 @@ class BasePage:
         self.find_element(selector, timeout).clear()
 
     def get_text(self, selector, timeout=config.TIMEOUT):
-        self.find_element(selector, timeout).text
+        return self.find_element(selector, timeout).text
 
     def type(self, selector, text, timeout=config.TIMEOUT):
         element = self.find_element(selector, timeout)
