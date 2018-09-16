@@ -17,6 +17,7 @@ pip install selenium
 pip install sauceclient
 pip install Appium-Python-Client
 pip install pytest
+pip install allure-pytest
 ```
 ## Chromedriver setup
 1. Download chromedriver compatible version equivalent with selenium driver.
@@ -31,6 +32,13 @@ Note: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 ## How to run tests
 In progress
+
+## Logging
+In progress
+
+## Reporting
+Allure Reporting -- In progress
+https://docs.qameta.io/allure/#_python
 
 ## Automation Framework
 1. Framework Directory Structure:
