@@ -43,9 +43,11 @@ In progress
 
 ## Reporting
 Allure Reporting -- https://docs.qameta.io/allure/#_python
-1. Install Allure from `https://docs.qameta.io/allure/#_installing_a_commandline`
-2. Run tests with Allure : `pytest --alluredir=<results_dir> src/tests/search_test.py`
-3. Generate Allure report : `allure serve <results_dir>`
+1. Install Allure on the local machine : `https://docs.qameta.io/allure/#_installing_a_commandline`
+2. Run tests with Allure in venv : 
+    - Activate the virtual env: `source venv/bin/activate`
+    - `pytest --alluredir=<results_dir> src/tests/search_test.py`
+3. Generate Allure report in `venv`: `allure serve <results_dir>`
 
 ## Automation Framework
 1. Framework Directory Structure:
