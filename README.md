@@ -33,14 +33,19 @@ Note: https://sites.google.com/a/chromium.org/chromedriver/downloads
 2. Select the python from your venv as your python interpreter
 
 ## How to run tests
-In progress
+1. Run from commandline: 
+    - Activate the virtual env: `source venv/bin/activate`
+    - pytest <test_name>
+2. Run from IDE
 
 ## Logging
 In progress
 
 ## Reporting
-Allure Reporting -- In progress
-https://docs.qameta.io/allure/#_python
+Allure Reporting -- https://docs.qameta.io/allure/#_python
+1. Install Allure from `https://docs.qameta.io/allure/#_installing_a_commandline`
+2. Run tests with Allure : `pytest --alluredir=<results_dir> src/tests/search_test.py`
+3. Generate Allure report : `allure serve <results_dir>`
 
 ## Automation Framework
 1. Framework Directory Structure:
