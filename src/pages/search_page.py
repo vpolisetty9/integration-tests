@@ -3,7 +3,8 @@ from selenium.webdriver.common.by import By
 
 class SearchPage(BasePage):
 
-    search_button = (By.CSS_SELECTOR, 'input[type="submit"][value="Find Candidate"]')
+    search_top_button = (By.CSS_SELECTOR, '.submit_new_search')
+    search_button = (By.CSS_SELECTOR, 'input[type="submit"][value="Find Candidate"][class*="btn-secondary"]')
     cancel_button = (By.CSS_SELECTOR, '#new_search input[type="cancel"]')
     titles_input = (By.CSS_SELECTOR, '#new_search #search_titles')
     locations_input = (By.CSS_SELECTOR, '#new_search #search_locations')

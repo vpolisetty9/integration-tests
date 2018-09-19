@@ -26,7 +26,7 @@ class SearchTest(BaseTest):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
         search_helper = SearchHelper()
-        job_title = 'Principal Architect'
+        job_title = 'CTO'
 
         # Step1: Login as admin
         login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
@@ -36,7 +36,7 @@ class SearchTest(BaseTest):
         search_helper.enter_job_title(job_title)
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(9)
+        search_helper.validate_candidate_results_text(3)
         search_helper.validate_job_title(job_title)
         search_helper.click_search_result_by_index()
 
@@ -44,7 +44,7 @@ class SearchTest(BaseTest):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
         search_helper = SearchHelper()
-        location = 'Newyork'
+        location = 'Texas'
 
         # Step1: Login as admin
         login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
@@ -54,7 +54,7 @@ class SearchTest(BaseTest):
         search_helper.enter_location(location)
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(10)
+        search_helper.validate_candidate_results_text(5)
         search_helper.validate_job_title(location)
         search_helper.click_search_result_by_index()
 
@@ -80,7 +80,7 @@ class SearchTest(BaseTest):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
         search_helper = SearchHelper()
-        company = 'Linkedin'
+        company = 'Amazon'
 
         # Step1: Login as admin
         login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
@@ -90,7 +90,7 @@ class SearchTest(BaseTest):
         search_helper.enter_companies(company)
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(5)
+        search_helper.validate_candidate_results_text(2)
         search_helper.click_search_result_by_index()
 
     def test_degrees_search(self):
@@ -124,14 +124,14 @@ class SearchTest(BaseTest):
         search_helper.enter_schools(schools)
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(8)
+        search_helper.validate_candidate_results_text(2)
         search_helper.click_search_result_by_index()
 
     def test_keyword_search(self):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
         search_helper = SearchHelper()
-        keyword = 'Jobs3*'
+        keyword = 'Jobs1*'
 
         # Step1: Login as admin
         login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
@@ -141,7 +141,7 @@ class SearchTest(BaseTest):
         search_helper.enter_keyword(keyword)
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(10)
+        search_helper.validate_candidate_results_text(7)
         search_helper.click_search_result_by_index()
 
     # def test_min_education_level_search(self):
@@ -173,7 +173,7 @@ class SearchTest(BaseTest):
         search_helper.select_top_school()
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(36)
+        search_helper.validate_candidate_results_text(8)
         search_helper.click_search_result_by_index()
 
     def test_top_company_search(self):
@@ -189,15 +189,15 @@ class SearchTest(BaseTest):
         search_helper.select_top_company()
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(19)
+        search_helper.validate_candidate_results_text(4)
         search_helper.click_search_result_by_index()
 
     def test_multiple_filters(self):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
         search_helper = SearchHelper()
-        job_title = 'Software Engineer'
-        location = 'Mountain View'
+        job_title = 'CTO'
+        location = 'Texas'
 
         # Step1: Login as admin
         login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
@@ -208,11 +208,11 @@ class SearchTest(BaseTest):
         search_helper.enter_location(location)
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(3)
+        search_helper.validate_candidate_results_text(2)
         search_helper.select_top_company()
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
-        search_helper.validate_candidate_results_text(1)
+        search_helper.validate_candidate_results_text(2)
         search_helper.click_search_result_by_index()
 
     def test_non_matching_search(self):

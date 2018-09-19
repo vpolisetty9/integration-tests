@@ -20,7 +20,7 @@ class BaseTest(TestCase):
         self.desired_capabilities = json.loads(capabilities)["target_capabilities"][self.test_target]
         print(self.desired_capabilities)
         if self.test_target_context == "desktop":
-            self.logger.info("Mobile Test Target")
+            self.logger.info("Desktop Test Target")
             self.driver = webdriver.Chrome(desired_capabilities=self.desired_capabilities)
         else:
             self.logger.info("Mobile Test Target")
