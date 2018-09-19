@@ -24,18 +24,9 @@ Note:`pip list` will give the list of installed modules
 ## Chromedriver setup
 1. Download chromedriver compatible version equivalent with selenium driver.
 https://chromedriver.storage.googleapis.com/index.html
-2. Set the chromedriver in system path -- In progress
+2. Set the chromedriver in system path -- Download chromedriver and paste in to usr/local/bin
 
 Note: https://sites.google.com/a/chromium.org/chromedriver/downloads
-
-## Firefox setup
-In progress
-
-## Safari setup
-In progress
-
-## IE11/Edge setup
-In progress
 
 ## IDE Setup
 1. Install Pycharm (http://www.jetbrains.com/pycharm/) or intellj IDE (need to install Python plugin from marketplace)
