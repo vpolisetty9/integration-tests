@@ -28,6 +28,15 @@ https://chromedriver.storage.googleapis.com/index.html
 
 Note: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
+## Firefox setup
+In progress
+
+## Safari setup
+In progress
+
+## IE11/Edge setup
+In progress
+
 ## IDE Setup
 1. Install Pycharm (http://www.jetbrains.com/pycharm/) or intellj IDE (need to install Python plugin from marketplace)
 2. Select the python from your venv as your python interpreter
@@ -48,6 +57,8 @@ Allure Reporting -- https://docs.qameta.io/allure/#_python
     - Activate the virtual env: `source venv/bin/activate`
     - `pytest --alluredir=<results_dir> src/tests/search_test.py`
 3. Generate Allure report in `venv`: `allure serve <results_dir>`
+
+
 
 ## Automation Framework
 1. Framework Directory Structure:
