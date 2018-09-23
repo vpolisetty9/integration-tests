@@ -21,7 +21,12 @@ class BaseTest(TestCase):
         print(self.desired_capabilities)
         if self.test_target_context == "desktop":
             self.logger.info("Desktop Test Target")
-            self.driver = webdriver.Chrome(desired_capabilities=self.desired_capabilities)
+            if "desktop_chrome" in self.test_target:
+                self.driver = webdriver.Chrome(desired_capabilities=self.desired_capabilities)
+            elif "desktop_firefox" in self.test_target:
+                self.driver = webdriver.Firefox(desired_capabilities=self.desired_capabilities)
+            elif "desktop_safari" in self.test_target:
+                self.driver = webdriver.Safari(desired_capabilities=self.desired_capabilities)
         else:
             self.logger.info("Mobile Test Target")
 

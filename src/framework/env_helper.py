@@ -5,7 +5,7 @@ from src.framework.env_config import env_config
 class EnvHelper:
     env = json.loads(env_config)
     test_env = os.environ.get("TEST_ENV") if os.environ.get("TEST_ENV") is not None else "STG"
-    test_target = os.environ.get("TEST_TARGET") if os.environ.get("TEST_TARGET") is not None else "desktop_chrome"
+    test_target = os.environ.get("TEST_TARGET") if os.environ.get("TEST_TARGET") is not None else "desktop_chrome_mac"
 
     @staticmethod
     def get_test_env():
