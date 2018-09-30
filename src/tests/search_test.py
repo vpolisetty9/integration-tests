@@ -9,6 +9,54 @@ class SearchTest(BaseTest):
     def setUp(self):
         super(SearchTest, self).setUp()
 
+    def test_top_search_bar_job_title(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+        job_title = 'CTO'
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top search input job title
+        signedin_helper.click_search_link()
+        search_helper.enter_top_keyword(job_title)
+        search_helper.click_top_search_button()
+        search_helper.verify_total_candidates_text()
+        search_helper.validate_candidate_results_text(2)
+
+    def test_top_search_bar_location(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+        location = 'Texas'
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top search input by location
+        signedin_helper.click_search_link()
+        search_helper.enter_top_keyword(location)
+        search_helper.click_search_button()
+        search_helper.verify_total_candidates_text()
+        search_helper.validate_candidate_results_text(5)
+
+    def test_top_search_bar_skills(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+        skills = 'java'
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top search input by location
+        signedin_helper.click_search_link()
+        search_helper.enter_top_keyword(skills)
+        search_helper.click_search_button()
+        search_helper.verify_total_candidates_text()
+        search_helper.validate_candidate_results_text(4)
+
     def test_default_search(self):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
@@ -187,6 +235,54 @@ class SearchTest(BaseTest):
         # Step2 : Perform top company search
         signedin_helper.click_search_link()
         search_helper.select_top_company()
+        search_helper.click_search_button()
+        search_helper.verify_total_candidates_text()
+        search_helper.validate_candidate_results_text(4)
+        search_helper.click_search_result_by_index()
+
+    def test_active_profile_search(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top school search
+        signedin_helper.click_search_link()
+        search_helper.select_active_profiles()
+        search_helper.click_search_button()
+        search_helper.verify_total_candidates_text()
+        search_helper.validate_candidate_results_text(15)
+        search_helper.click_search_result_by_index()
+
+    def test_available_phone_number_search(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top school search
+        signedin_helper.click_search_link()
+        search_helper.select_avail_phone_num()
+        search_helper.click_search_button()
+        search_helper.verify_total_candidates_text()
+        search_helper.validate_candidate_results_text(15)
+        search_helper.click_search_result_by_index()
+
+    def test_available_email_search(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top school search
+        signedin_helper.click_search_link()
+        search_helper.select_avail_email()
         search_helper.click_search_button()
         search_helper.verify_total_candidates_text()
         search_helper.validate_candidate_results_text(4)
