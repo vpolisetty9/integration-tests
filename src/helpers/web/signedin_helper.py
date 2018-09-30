@@ -8,6 +8,9 @@ class SignedinHelper:
     def verify_page(self):
         self.signedin_page.wait_for_page_load()
 
+    def click_addprofile_link(self):
+        self.signedin_page.click_and_wait(self.signedin_page.add_profile_link)
+
     def click_search_link(self):
         self.signedin_page.click_and_wait(self.signedin_page.search_link)
 
