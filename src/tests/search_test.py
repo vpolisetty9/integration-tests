@@ -9,6 +9,19 @@ class SearchTest(BaseTest):
     def setUp(self):
         super(SearchTest, self).setUp()
 
+    def test_default_top_bar_search(self):
+        login_helper = LoginHelper()
+        signedin_helper = SignedinHelper()
+        search_helper = SearchHelper()
+
+        # Step1: Login as admin
+        login_helper.login(UtilsHelper.get_admin_user(), UtilsHelper.get_admin_password())
+
+        # Step2 : Perform top bar null search
+        signedin_helper.click_search_link()
+        search_helper.click_top_search_button()
+        search_helper.click_search_result_by_index()
+
     def test_top_search_bar_job_title(self):
         login_helper = LoginHelper()
         signedin_helper = SignedinHelper()
