@@ -10,6 +10,7 @@ from selenium.common.exceptions import ElementNotVisibleException, ElementNotSel
 from selenium.webdriver.support.expected_conditions import staleness_of
 import time
 from contextlib import contextmanager
+from selenium.webdriver.support.ui import Select
 
 class BasePage:
 
@@ -112,6 +113,9 @@ class BasePage:
     def type(self, selector, text, timeout=config.TIMEOUT):
         element = self.find_element(selector, timeout)
         element.send_keys(text)
+
+    def select(self, locator, timeout=config.TIMEOUT):
+        return Select(self.find_element(locator, timeout))
 
     def get_attribute(self, selector, attribute, timeout=config.TIMEOUT):
         self.find_element(selector, timeout).get_attribute(attribute)

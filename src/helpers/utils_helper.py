@@ -11,3 +11,10 @@ class UtilsHelper:
     def get_admin_password():
         return "qwerty123"
 
+    @staticmethod
+    def get_recruiter_user():
+        return "recruitercardinal+1@gmail.com"
+
+    @staticmethod
+    def get_recruiter_password():
+        return "qwerty123"
